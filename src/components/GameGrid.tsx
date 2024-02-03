@@ -28,6 +28,7 @@ const GameGrid = () => {
 							<GameCardSkeleton key={skeleton} />
 						</GameCardContainer>
 					))}
+
 				{games.map((game) => (
 					<GameCardContainer>
 						<GameCard key={game.id} game={game} />
