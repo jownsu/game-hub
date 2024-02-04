@@ -1,4 +1,7 @@
+/* PLUGINS */
 import { Heading } from "@chakra-ui/react";
+
+/* HOOKS */
 import { GameQuery } from "../App";
 
 interface Props {

@@ -1,3 +1,4 @@
+/* PLUGINS */
 import { Skeleton, Card, CardBody, SkeletonText } from "@chakra-ui/react";
 
 const GameCardSkeleton = () => {

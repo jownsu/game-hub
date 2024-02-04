@@ -1,5 +1,5 @@
+/* PLUGINS */
 import { Icon, HStack } from "@chakra-ui/react";
-import { Platform } from "../hooks/useGames";
 import {
 	FaWindows,
 	FaPlaystation,
@@ -13,6 +13,8 @@ import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { IconType } from "react-icons";
 
+/* HOOKS */
+import { Platform } from "../hooks/useGames";
 interface Props {
 	platforms: Platform[];
 }

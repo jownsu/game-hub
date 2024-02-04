@@ -3,10 +3,10 @@ import { HStack, Image } from "@chakra-ui/react";
 
 /* COMPONENTS */
 import ColorModeSwitch from "./ColorModeSwitch";
+import SearchInput from "./SearchInput";
 
 /* ASSETS */
 import logo from "../assets/logo.webp";
-import SearchInput from "./SearchInput";
 
 interface Props {
 	onSearch: (searchText: string) => void;

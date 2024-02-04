@@ -1,7 +1,14 @@
+/* PLUGINS */
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
+
+/* HOOKS */
 import { Game } from "../hooks/useGames";
+
+/* COMPONENTS */
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "../components/CriticScore";
+
+/* SERVICES */
 import getCroppedImageUrl from "../services/image-url";
 
 interface Props {

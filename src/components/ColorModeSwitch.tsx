@@ -1,3 +1,4 @@
+/* PLUGINS */
 import { Switch, HStack, useColorMode, Text } from "@chakra-ui/react";
 
 const ColorModeSwitch = () => {
