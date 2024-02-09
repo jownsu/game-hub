@@ -22,10 +22,10 @@ const GameGrid = ({ gameQuery }: Props) => {
 		useGames(gameQuery);
 	const skeletons = [1, 2, 3, 4, 5, 6];
 
+	if (error) return <Text>{error.message}</Text>;
+
 	return (
 		<Box padding={"10px"}>
-			{error && <Text>{error.message}</Text>}
-
 			<SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={3}>
 				{isLoading &&
 					skeletons.map((skeleton) => (
