@@ -1,11 +1,17 @@
-import useData from "./useData";
+import { useQuery } from "@tanstack/react-query";
+import genreService, { Genre } from "../services/genreService";
+import { FetchResponse } from "../services/apiClient";
+import { AxiosError } from "axios";
 
-export interface Genre {
-	id: number;
-	name: string;
-	image_background: string;
-}
+import genres from "../data/genre";
 
-const useGenres = () => useData<Genre>("genres");
+const useGenres = () => {
+	return useQuery<FetchResponse<Genre>, AxiosError>({
+		queryKey: ["genres"],
+		queryFn: genreService.getAll,
+		staleTime: 24 * 60 * 60 * 1000 /* 24h */,
+		initialData: { count: genres.length, results: genres }
+	});
+};
 
 export default useGenres;

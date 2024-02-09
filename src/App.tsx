@@ -13,8 +13,8 @@ import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
 /* HOOKS */
-import { Genre } from "./hooks/useGenres";
-import { Platform } from "./hooks/useGames";
+import { Genre } from "./services/genreService";
+import { Platform } from "./services/gameService";
 
 export interface GameQuery {
 	genre: Genre | null;
