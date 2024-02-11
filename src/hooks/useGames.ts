@@ -3,6 +3,7 @@ import { GameQuery } from "../App";
 import gameService, { Game } from "../services/gameService";
 import { FetchResponse } from "../services/apiClient";
 import { AxiosError } from "axios";
+import ms from "ms";
 
 const useGames = (gameQuery: GameQuery) => {
 	return useInfiniteQuery<FetchResponse<Game>, AxiosError>({
@@ -17,7 +18,7 @@ const useGames = (gameQuery: GameQuery) => {
 					page: pageParam
 				}
 			}),
-		staleTime: 24 * 60 * 60 * 1000 /* 24h */,
+		staleTime: ms("24h"),
 		getNextPageParam: (lastPage, allPages) => {
 			return lastPage.next ? allPages.length + 1 : undefined;
 		}
