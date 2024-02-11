@@ -5,6 +5,9 @@ import { FetchResponse } from "../services/apiClient";
 import { AxiosError } from "axios";
 import ms from "ms";
 
+/* FOR REFERNCE */
+/* const apiClient = new APIClient<Game>("/games"); */
+
 const useGames = (gameQuery: GameQuery) => {
 	return useInfiniteQuery<FetchResponse<Game>, AxiosError>({
 		queryKey: ["genre", gameQuery],
