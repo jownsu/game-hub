@@ -6,15 +6,12 @@ import useGenres from "../hooks/useGenres";
 
 /* SERVICES */
 import getCroppedImageUrl from "../services/image-url";
-import { Genre } from "../services/genreService";
+import useGameQuery from "../store";
 
-interface Props {
-	onSelectGenre: (genre: Genre) => void;
-	selectedGenreId?: number;
-}
-
-const GenreList = ({ onSelectGenre, selectedGenreId }: Props) => {
+const GenreList = () => {
 	const { data: genres, error, isLoading } = useGenres();
+	const genreId = useGameQuery((state) => state.gameQuery.genreId);
+	const setGameQuery = useGameQuery((state) => state.setGameQuery);
 
 	if (error) return null;
 	if (isLoading) return <Spinner />;
@@ -30,12 +27,12 @@ const GenreList = ({ onSelectGenre, selectedGenreId }: Props) => {
 							src={getCroppedImageUrl(genre.image_background)}
 						/>{" "}
 						<Button
-							onClick={() => onSelectGenre(genre)}
+							onClick={() => setGameQuery("genreId", genre.id)}
 							fontSize={"md"}
 							variant={"link"}
 							textAlign={"left"}
 							whiteSpace="normal"
-							fontWeight={genre.id === selectedGenreId ? "bold" : "normal"}
+							fontWeight={genre.id === genreId ? "bold" : "normal"}
 						>
 							{genre.name}
 						</Button>

@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { GameQuery } from "../App";
+import useGameQuery from "../store";
 import gameService, { Game } from "../services/gameService";
 import { FetchResponse } from "../services/apiClient";
 import { AxiosError } from "axios";
@@ -8,7 +8,9 @@ import ms from "ms";
 /* FOR REFERNCE */
 /* const apiClient = new APIClient<Game>("/games"); */
 
-const useGames = (gameQuery: GameQuery) => {
+const useGames = () => {
+	const gameQuery = useGameQuery((state) => state.gameQuery);
+
 	return useInfiniteQuery<FetchResponse<Game>, AxiosError>({
 		queryKey: ["genre", gameQuery],
 		queryFn: ({ pageParam = 1 }) =>
