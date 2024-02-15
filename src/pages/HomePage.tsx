@@ -1,4 +1,7 @@
+/* PLUGINS */
 import { Box, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+
+/* COMPONENTS */
 import GameGrid from "../components/GameGrid";
 import GameHeading from "../components/GameHeading";
 import GenreList from "../components/GenreList";

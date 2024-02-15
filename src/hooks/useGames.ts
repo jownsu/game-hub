@@ -1,9 +1,16 @@
+/* PLUGINS */
 import { useInfiniteQuery } from "@tanstack/react-query";
-import useGameQuery from "../store";
-import { Game } from "../entities/Game";
-import APIClient, { FetchResponse } from "../services/apiClient";
 import { AxiosError } from "axios";
 import ms from "ms";
+
+/* HOOKS */
+import useGameQuery from "../store";
+
+/* ENTITIES */
+import { Game } from "../entities/Game";
+
+/* API */
+import APIClient, { FetchResponse } from "../services/apiClient";
 
 const apiClient = new APIClient<Game>("/games");
 

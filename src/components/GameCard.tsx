@@ -2,7 +2,7 @@
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-/* HOOKS */
+/* ENTITIES */
 import { Game } from "../entities/Game";
 
 /* COMPONENTS */

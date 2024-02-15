@@ -1,7 +1,12 @@
+/* PLUGINS */
 import { useQuery } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import ms from "ms";
+
+/* API */
 import APIClient from "../services/apiClient";
+
+/* ENTITIES */
 import { Game } from "../entities/Game";
 
 const apiClient = new APIClient<Game>(`/games`);

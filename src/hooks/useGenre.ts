@@ -1,3 +1,4 @@
+/* HOOKS */
 import useGenres from "./useGenres";
 
 const useGenre = (genreId?: number) => {

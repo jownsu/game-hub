@@ -1,4 +1,7 @@
+/* PLUGINS */
 import { Image, SimpleGrid } from "@chakra-ui/react";
+
+/* HOOKS */
 import useScreenshots from "../hooks/useScreenshots";
 
 interface Props {

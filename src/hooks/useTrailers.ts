@@ -1,6 +1,11 @@
+/* PLUGINS */
 import { useQuery } from "@tanstack/react-query";
+
+/* API */
 import APIClient from "../services/apiClient";
-import { Trailer } from "../entities/Trailer";
+
+/* ENTITIES */
+import Trailer from "../entities/Trailer";
 
 const useTrailers = (gameId: number) => {
 	const apiClient = new APIClient<Trailer>(`games/${gameId}/movies`);

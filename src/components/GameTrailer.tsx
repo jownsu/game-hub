@@ -1,3 +1,4 @@
+/* HOOKS */
 import useTrailers from "../hooks/useTrailers";
 
 interface Props {

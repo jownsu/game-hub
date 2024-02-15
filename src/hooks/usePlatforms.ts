@@ -1,9 +1,16 @@
+/* PLUGINS */
 import { useQuery } from "@tanstack/react-query";
-import { Platform } from "../entities/Platform";
-import APIClient, { FetchResponse } from "../services/apiClient";
 import { AxiosError } from "axios";
-import platforms from "../data/platform";
 import ms from "ms";
+
+/* ENTITIES */
+import Platform from "../entities/Platform";
+
+/* API */
+import APIClient, { FetchResponse } from "../services/apiClient";
+
+/* DATA */
+import platforms from "../data/platform";
 
 const apiClient = new APIClient<Platform>("/platforms/lists/parents");
 

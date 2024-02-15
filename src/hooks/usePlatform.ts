@@ -1,3 +1,4 @@
+/* HOOKS */
 import usePlatforms from "./usePlatforms";
 
 const usePlatform = (platformId?: number) => {

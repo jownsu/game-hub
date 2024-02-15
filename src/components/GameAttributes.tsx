@@ -1,5 +1,10 @@
+/* PLUGINS */
 import { SimpleGrid, Text } from "@chakra-ui/react";
+
+/* ENTITIES */
 import { Game } from "../entities/Game";
+
+/* COMPONENTS */
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
 
