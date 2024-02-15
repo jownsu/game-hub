@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import ms from "ms";
 import APIClient from "../services/apiClient";
-import { GameDetails } from "../services/gameService";
+import { GameDetails } from "../entities/GameDetails";
 
 const apiClient = new APIClient<GameDetails>(`/games`);
 

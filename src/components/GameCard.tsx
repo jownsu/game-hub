@@ -3,7 +3,7 @@ import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 /* HOOKS */
-import { Game } from "../services/gameService";
+import { Game } from "../entities/Game";
 
 /* COMPONENTS */
 import PlatformIconList from "./PlatformIconList";
